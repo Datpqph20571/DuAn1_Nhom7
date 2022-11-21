@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  */
 public class DBContext {
     private static String user = "sa";
-    private static String pass = "1111";
+    private static String pass = "123456";
     private static String url = "jdbc:sqlserver://localhost:1433;databaseName=DUAN1_Main;encrypt=true;trustServerCertificate=true;sslProtocol=TLSv1.2";
     
     static {
