@@ -52,10 +52,10 @@ public class SpalshScreen extends javax.swing.JFrame {
 
         jLabel_SoftZyd.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
         jLabel_SoftZyd.setForeground(new java.awt.Color(169, 224, 49));
-        jLabel_SoftZyd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/raven/icon/DBAV.png"))); // NOI18N
+        jLabel_SoftZyd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/raven/icon/GAME.png"))); // NOI18N
         jLabel_SoftZyd.setText("2Hand Fashion");
         jLabel_SoftZyd.setToolTipText("");
-        jPanel1.add(jLabel_SoftZyd, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 630, -1));
+        jPanel1.add(jLabel_SoftZyd, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 630, -1));
 
         jLabel_inven.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         jLabel_inven.setForeground(new java.awt.Color(169, 224, 49));
