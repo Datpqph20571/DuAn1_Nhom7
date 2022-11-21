@@ -138,7 +138,7 @@ public class SanPhamRepository {
     }
 
     public static void main(String[] args) {
-        ArrayList<SamPhamViewModel> lst = new SanPhamRepository().getList();
+        ArrayList<SanPhamViewModel> lst = new SanPhamRepository().getList();
         System.out.println(lst.toString());
     }
 }

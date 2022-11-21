@@ -5,7 +5,6 @@
 package Views;
 
 
-<<<<<<< HEAD
 import ViewModel.SanPhamViewModel;
 import Views.NewSignin;
 import java.util.ArrayList;
@@ -16,7 +15,7 @@ import reponsitory.SanPhamRepository;
 import service.IMPL.SanPhamServiceIMPL;
 import service.SanPhamService;
 
-=======
+
 import ViewModel.NhanVienViewModel;
 import Views.NewSignin;
 import donaimModel.NhanVien;
@@ -26,10 +25,10 @@ import javax.swing.table.DefaultTableModel;
 import reponsitory.NhanVienRepoSitory;
 import service.IMPL.NhanVienServiceIMPL;
 import service.NhanVienService;
->>>>>>> b6116205eaf4f3b89ebd32e42ed7968f95a54d80
+
 
 public class ViewQuanLy extends javax.swing.JFrame {
-<<<<<<< HEAD
+
 
     private SanPhamService sanPhamService = new SanPhamServiceIMPL();
     private DefaultTableModel model;
