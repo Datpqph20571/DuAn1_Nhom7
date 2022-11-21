@@ -4,10 +4,22 @@
  */
 package service;
 
+import ViewModel.NhanVienViewModel;
+import donaimModel.NhanVien;
+import java.util.ArrayList;
+
 /**
  *
  * @author Khanh
  */
 public interface NhanVienService {
-    
+    public ArrayList<NhanVienViewModel> getList();
+
+    public Boolean them(NhanVien nv);
+
+    public Boolean sua(String idNV, NhanVien nv);
+
+    public Boolean xoa(String idNV);
+
+    public ArrayList<NhanVienViewModel> timkiem(String idNV);
 }

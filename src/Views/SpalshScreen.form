@@ -60,14 +60,14 @@
               <Color blue="31" green="e0" red="a9" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/raven/icon/logo2hand-removebg-preview.png"/>
+              <Image iconType="3" name="/com/raven/icon/GAME.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2Hand Fashion"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="120" y="90" width="630" height="-1"/>
+              <AbsoluteConstraints x="120" y="120" width="630" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>

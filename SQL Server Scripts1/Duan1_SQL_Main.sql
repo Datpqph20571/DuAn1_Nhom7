@@ -3,7 +3,10 @@ go
 use DUAN1_Main
 go
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 331a311898f694d54a3672fb4ff20ea73dbc3c0e
 IF OBJECT_ID ('TRANGTHAISANPHAM') IS NOT NULL  
 DROP TABLE TRANGTHAISANPHAM;  
 GO 
@@ -11,8 +14,15 @@ create table TRANGTHAISANPHAM
 (
 	Idtt int primary key,
 	TenTrangThai nvarchar(100) not null,
+<<<<<<< HEAD
+	
+);
+insert into TRANGTHAISANPHAM(Idtt,TenTrangThai) values('001','con hang')
+select * from TRANGTHAISANPHAM
+=======
 
 );
+>>>>>>> 331a311898f694d54a3672fb4ff20ea73dbc3c0e
 IF OBJECT_ID ('THELOAI') IS NOT NULL  
 DROP TABLE THELOAI;  
 GO 
@@ -54,9 +64,17 @@ insert into SANPHAM(IdSp,TenSp,NgayNhap,Idtt,IdNhanHieu,MauSac,KichCo,GiaBan,Nga
 insert into SANPHAM(IdSp,TenSp,NgayNhap,Idtt,IdNhanHieu,MauSac,KichCo,GiaBan,NgaySanXuat,SoLuong) values
 				('Sp5',N'Quần Âu','2022-10-12',1,'NH1',N'Đen','L','100000','2022-09-10',100)
 select SANPHAM.IdSp,TenSp,NgayNhap,Idtt,IdNhanHieu,MauSac,KichCo,GiaBan,NgaySanXuat,SoLuong from SANPHAM
+<<<<<<< HEAD
+IF OBJECT_ID ('CHITIETSANPHAM') IS NOT NULL  
+DROP TABLE CHITIETSANPHAM;  
+GO 
+
+
+=======
 IF OBJECT_ID ('NGUOIDUNG') IS NOT NULL  
 DROP TABLE NGUOIDUNG;  
 GO 
+>>>>>>> 331a311898f694d54a3672fb4ff20ea73dbc3c0e
 create table CHITIETSANPHAM
 (
 	IdChiTietSanPham varchar(10) primary key,
@@ -79,6 +97,11 @@ create table TRANGTHAI
 	IdTrangThai varchar(10) primary key,
 	TenTrangThai nvarchar(100) not null,
 );
+<<<<<<< HEAD
+insert into TRANGTHAI(IdTrangThai,TenTrangThai) values ('001','Dang lam'),('002','het hang')
+select * from TRANGTHAI
+=======
+>>>>>>> 331a311898f694d54a3672fb4ff20ea73dbc3c0e
 IF OBJECT_ID ('NHANVIEN') IS NOT NULL  
 DROP TABLE NHANVIEN;  
 GO 
@@ -167,13 +190,24 @@ create table ACCOUNT
 
 	insert into account values ('admin','admin','admin',0)
 	insert into account values ('nhanvien','nhanvien','nhanvien',1)
+<<<<<<< HEAD
+=======
 	insert into account values ('nhanvien1','nhanvien1','nhanvien1',1)
+>>>>>>> 331a311898f694d54a3672fb4ff20ea73dbc3c0e
  insert into TRANGTHAISANPHAM(Idtt,TenTrangThai) values ('1','còn hàng'),('2','hết hàng')
  insert into NGUOIDUNG(IdNguoiDung,Email,SDT) values ('ND1','nd1@gmail.com','023456781'),('ND2','nd1@gmail.com','023456781'),('ND3','nd1@gmail.com','023456781')
  insert into NHANHIEU(IdNhanHieu,TenNhanHieu) values('NH1','Adidas'),('NH2','Dior')
  insert into TRANGTHAI(IdTrangThai,TenTrangThai) values ('1',N'Tốt'),('2',N'Bình thường')
 
 insert into NHANVIEN(IdNhanVien,MaNV,TenNV,NgaySinh,Email,SDT,DiaChi,IdTrangThai,ChucVu,GioiTinh,TK,MK) values 
+<<<<<<< HEAD
+					('NV2','012',N'Phạm Quốc Đạt','2003-08-10','datpq@gmail.com','0982023282','Thanh Hoa','001',N'Nhân Viên',N'Nam','dat123','dat123')
+insert into HOADON(IDHD,IdSp,TenSp,IdNhanVien,IdNguoiDung,NgayTao,DiaChi,ThanhToan) values
+					('HD05','Sp1',N'Áo thun','NV1','ND1','2022-11-12',N'Hà Nội',N'Đã thanh toán')
+
+					
+=======
 					('NV2','012',N'Phạm Quốc Đạt','2003-08-10','datpq@gmail.com','0982023282','Thanh Hoa','1',N'Nhân Viên',N'Nam','dat123','dat123')
 insert into HOADON(IDHD,IdSp,TenSp,IdNhanVien,IdNguoiDung,NgayTao,DiaChi,ThanhToan) values
 					('HD05','Sp1',N'Áo thun','NV1','ND1','2022-11-12',N'Hà Nội',N'Đã thanh toán')
+>>>>>>> 331a311898f694d54a3672fb4ff20ea73dbc3c0e
