@@ -20,8 +20,8 @@ public class jdbcHelper1 {
 
 //<<<<<<< HEAD
     static String user = "sa";
-    static String pass = "dung8402";
-    static String url = "jdbc:sqlserver://localhost:1433;database=DUAN1;" + 
+    static String pass = "1111";
+    static String url = "jdbc:sqlserver://localhost:1433;database=DUAN1_Main;" + 
                     "encrypt=true;trustServerCertificate=true;sslProtocol=TLSv1.2";
 //=======
 //     static String user = EnvUtil.get("DB_USER");
