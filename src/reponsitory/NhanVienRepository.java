@@ -73,21 +73,7 @@ public class NhanVienRepository {
             return false;
         }
     }
-//    public ArrayList<String> loadCb() {
-//        ArrayList<String> listload = new ArrayList<>();
-//        String query = "select DISTINCT SAMPHAM.MauSac from SANPHAM";
-//        try ( Connection con = connection.getConnection();  
-//                PreparedStatement ps = con.prepareStatement(query)) {
-//            ResultSet rs = ps.executeQuery();
-//            while (rs.next()) {
-//                String s = rs.getString(1);
-//                listload.add(s);
-//            }
-//        } catch (SQLException ex) {
-//            ex.getMessage();
-//        }
-//        return listload;
-//    }
+
     public Boolean xoa(String idNV) {
         String sql = "delete NhanVien where idNhanVien = ?";
         try (Connection con = connection.getConnection();
