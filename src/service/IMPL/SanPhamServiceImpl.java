@@ -4,40 +4,10 @@
  */
 package service.IMPL;
 
-import ViewModel.SanPhamViewModel;
-import donaimModel.SanPham;
-import java.util.ArrayList;
-import service.SanPhamService;
-
 /**
  *
  * @author DELL
  */
-public class SanPhamServiceImpl implements SanPhamService{
-
-    @Override
-    public ArrayList<SanPhamViewModel> getList() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public Boolean them(SanPham nv) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public Boolean sua(String idNV, SanPham nv) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public Boolean xoa(String idSP) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public ArrayList<SanPhamViewModel> timkiem(String idSP) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+public class SanPhamServiceImpl {
     
 }

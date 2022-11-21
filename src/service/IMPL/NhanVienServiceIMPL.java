@@ -7,6 +7,7 @@ package service.IMPL;
 import ViewModel.NhanVienViewModel;
 import donaimModel.NhanVien;
 import java.util.ArrayList;
+import reponsitory.NhanVienRepository;
 import service.NhanVienSerVice;
 
 /**
@@ -14,30 +15,30 @@ import service.NhanVienSerVice;
  * @author Khanh
  */
 public class NhanVienServiceIMPL implements NhanVienSerVice{
-
+    private NhanVienRepository nvr = new NhanVienRepository();
     @Override
     public ArrayList<NhanVienViewModel> getList() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return nvr.getList();
     }
 
     @Override
     public Boolean them(NhanVien nv) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return nvr.them(nv);
     }
 
     @Override
     public Boolean sua(String idNV, NhanVien nv) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return nvr.sua(idNV, nv);
     }
 
     @Override
     public Boolean xoa(String idNV) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return nvr.xoa(idNV);
     }
 
     @Override
     public ArrayList<NhanVienViewModel> timkiem(String idNV) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return nvr.timkiem(idNV);
     }
     
 }
