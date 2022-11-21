@@ -523,8 +523,8 @@ private void LoadForm(){
     private void bttNVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttNVActionPerformed
         // TODO add your handling code here:
         pnlSP.setVisible(false);
-        pnlHoaDon.setVisible(true);
-        pnlNV.setVisible(false);
+        pnlHoaDon.setVisible(false);
+        pnlNV.setVisible(true);
         pnlLichSu.setVisible(false);
         pnlTaiKhoan.setVisible(false);
     }//GEN-LAST:event_bttNVActionPerformed
@@ -532,8 +532,8 @@ private void LoadForm(){
     private void bttHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttHoaDonActionPerformed
         // TODO add your handling code here:
         pnlSP.setVisible(false);
-        pnlHoaDon.setVisible(false);
-        pnlNV.setVisible(true);
+        pnlHoaDon.setVisible(true);
+        pnlNV.setVisible(false);
         pnlLichSu.setVisible(false);
         pnlTaiKhoan.setVisible(false);
     }//GEN-LAST:event_bttHoaDonActionPerformed
