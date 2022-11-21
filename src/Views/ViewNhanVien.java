@@ -39,7 +39,7 @@ public class ViewNhanVien extends javax.swing.JFrame {
         cboidsp.removeAllItems();
         lstSp = hdSer.getidsp();
         for (SanPham x : lstSp) {
-            cboidsp.addItem(x.getIdsp());
+            cboidsp.addItem(x.getIdSP());
         }
         lstkh = hdSer.getidkh();
         for (KhachHang x : lstkh) {
