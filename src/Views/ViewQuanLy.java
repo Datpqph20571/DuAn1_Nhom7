@@ -693,7 +693,7 @@ this.dispose();
         int confirm = JOptionPane.showConfirmDialog(this, " ban co chac muon tim?","confirm",JOptionPane.YES_NO_OPTION);
         if(confirm == JOptionPane.YES_OPTION){
             LoadDAta(nvs.timkiem(id));
-
+           
         }
     }//GEN-LAST:event_btnTimkiemActionPerformed
 
