@@ -10,7 +10,7 @@ package donaimModel;
  */
 public class SanPham {
     private String idsp;
-
+    private String ten;
     public SanPham() {
     }
 
