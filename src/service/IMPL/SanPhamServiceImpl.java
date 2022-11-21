@@ -7,6 +7,7 @@ package service.IMPL;
 import ViewModel.SanPhamViewModel;
 import donaimModel.SanPham;
 import java.util.ArrayList;
+import reponsitory.SanPhamRepository;
 import service.SanPhamService;
 
 /**
@@ -14,10 +15,10 @@ import service.SanPhamService;
  * @author DELL
  */
 public class SanPhamServiceImpl implements SanPhamService{
-
+    private SanPhamRepository sanPhamRepository = new SanPhamRepository();
     @Override
     public ArrayList<SanPhamViewModel> getList() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return sanPhamRepository.getList();
     }
 
     @Override

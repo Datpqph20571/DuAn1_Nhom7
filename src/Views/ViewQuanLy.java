@@ -13,9 +13,7 @@ import Views.NewSignin;
  */
 public class ViewQuanLy extends javax.swing.JFrame {
 
-    /**
-     * Creates new form viewQuanLy
-     */
+    
     public ViewQuanLy() {
         initComponents();
         setLocationRelativeTo(null);
