@@ -5,22 +5,69 @@
 package Views;
 
 
+import ViewModel.NhanVienViewModel;
 import Views.NewSignin;
+import donaimModel.NhanVien;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import reponsitory.NhanVienRepoSitory;
+import service.IMPL.NhanVienServiceIMPL;
+import service.NhanVienService;
 
 /**
  *
  * @author natsu
  */
 public class ViewQuanLy extends javax.swing.JFrame {
-
+    private NhanVienService nvs = new NhanVienServiceIMPL();
+    private DefaultTableModel dtm = new DefaultTableModel();
+    private NhanVienRepoSitory nhanVienRepository = new NhanVienRepoSitory();
     /**
      * Creates new form viewQuanLy
      */
     public ViewQuanLy() {
         initComponents();
         setLocationRelativeTo(null);
+        LoadDAta(nvs.getList());
+    }
+ private void LoadDAta(ArrayList<NhanVienViewModel> nvvms) {
+        dtm = (DefaultTableModel) tblBang.getModel();
+        dtm.setRowCount(0);
+        dtm.setColumnIdentifiers(new String[]{"idNV", "maNV", "tenNV", "ngaySinh", "email", "sdt", "diaChi", "idTrangthai", "chucVu", "gioiTinh","tk","mk"});
+        for (NhanVienViewModel nv : nvvms) {
+            dtm.addRow(new Object[]{nv.getIdNv(),nv.getMaNV(), nv.getTenNV(),  nv.getNgaySinh(), nv.getEmail(),
+                nv.getSdt(), nv.getDiaChi(), nv.getIdTrangthai(), nv.getChucVu(), nv.getGioiTinh(),nv.getTk(),nv.getMk()});
+        }
     }
 
+  
+private void LoadForm(){
+    txtIdnv.setText("");
+    txtManv.setText("");
+    txtTenNV.setText("");
+    txtNgaysinh.setText("");
+    txtEmail.setText("");
+    txtSDT.setText("");
+    txtDiachi.setText("");
+    txtIdtt.setText("");
+    txtChucvu.setText("");
+    txtGioitinh.setText("");
+    txtTk.setText("");
+    txtMk.setText("");
+}
+ public boolean validatee() {
+        if (txtIdnv.getText().isBlank() || txtManv.getText().isBlank() || txtTenNV.getText().isBlank() || txtNgaysinh.getText().isBlank()
+                || txtEmail.getText().isBlank() || txtSDT.getText().isBlank() || txtDiachi.getText().isBlank() || txtIdtt.getText().isBlank()
+                ||txtChucvu.getText().isBlank()||txtGioitinh.getText().isBlank()||txtTk.getText().isBlank()||txtMk.getText().isBlank()) {
+            JOptionPane.showMessageDialog(this, "Không được để trống!");
+            return false;
+        }
+
+
+        return true;
+
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
