@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package donaimModel;
+package ViewModel;
 
 /**
  *
- * @author pqd15
+ * @author DELL
  */
-public class SanPham {
+public class SanPhamViewModel {
 
     private String idSP;
     private String tenSP;
@@ -21,10 +21,10 @@ public class SanPham {
     private int giaBan;
     private String ngaySanXuat;
 
-    public SanPham() {
+    public SanPhamViewModel() {
     }
 
-    public SanPham(String idSP, String tenSP, String mauSac, String kichCo, int soLuong, String ngayNhap, String trangThai, String nhanHieu, int giaBan, String ngaySanXuat) {
+    public SanPhamViewModel(String idSP, String tenSP, String mauSac, String kichCo, int soLuong, String ngayNhap, String trangThai, String nhanHieu, int giaBan, String ngaySanXuat) {
         this.idSP = idSP;
         this.tenSP = tenSP;
         this.mauSac = mauSac;
@@ -119,7 +119,6 @@ public class SanPham {
 
     @Override
     public String toString() {
-        return "SanPham{" + "idSP=" + idSP + ", tenSP=" + tenSP + ", mauSac=" + mauSac + ", kichCo=" + kichCo + ", soLuong=" + soLuong + ", ngayNhap=" + ngayNhap + ", trangThai=" + trangThai + ", nhanHieu=" + nhanHieu + ", giaBan=" + giaBan + ", ngaySanXuat=" + ngaySanXuat + '}';
+        return "SanPhamViewModel{" + "idSP=" + idSP + ", tenSP=" + tenSP + ", mauSac=" + mauSac + ", kichCo=" + kichCo + ", soLuong=" + soLuong + ", ngayNhap=" + ngayNhap + ", trangThai=" + trangThai + ", nhanHieu=" + nhanHieu + ", giaBan=" + giaBan + ", ngaySanXuat=" + ngaySanXuat + '}';
     }
-
 }

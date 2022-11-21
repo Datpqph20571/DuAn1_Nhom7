@@ -29,6 +29,7 @@ public class ViewQuanLy extends javax.swing.JFrame {
     public ViewQuanLy() {
         initComponents();
         setLocationRelativeTo(null);
+        LoadDAta(nvs.getList());
     }
 private void LoadDAta(ArrayList<NhanVienViewModel> nvvms) {
         dtm = (DefaultTableModel) tblBang.getModel();
