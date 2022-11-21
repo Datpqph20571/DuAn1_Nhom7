@@ -657,9 +657,9 @@ this.dispose();
 
         int confirm = JOptionPane.showConfirmDialog(this, "ban co chac muon sua k?", "confirm", JOptionPane.YES_NO_OPTION);
         if (confirm == JOptionPane.YES_OPTION) {
-            
+            nvs.sua(idNV, nv);
             JOptionPane.showMessageDialog(this, "sua tc");
-            
+            LoadDAta(nvs.getList());
         }
     }//GEN-LAST:event_btnSua1ActionPerformed
 
