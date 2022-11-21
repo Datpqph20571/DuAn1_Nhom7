@@ -42,7 +42,7 @@ create table SANPHAM
 	MauSac nvarchar(30) not null,
 	KichCo varchar(10) not null,
 	GiaBan float not null,
-	NgaySanXuat datetime,
+	NgaySanXuat date,
 	SoLuong int not null,
 	foreign key (Idtt) references TRANGTHAISANPHAM(Idtt),
 	foreign key ( IdNhanHieu ) references NHANHIEU ( IdNhanHieu)
