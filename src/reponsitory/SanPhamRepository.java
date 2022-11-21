@@ -20,24 +20,31 @@ public class SanPhamRepository {
     private Connection DbcCon;
     public ArrayList<SanPhamViewModel> getList(){
     ArrayList<SanPhamViewModel> listSP = new ArrayList<>();
-    String sql = "Select * from SANPHAM";
+    String sql = "select SANPHAM.IdSp,TenSp,NgayNhap,Idtt,IdNhanHieu,MauSac,KichCo,GiaBan,NgaySanXuat,SoLuong from SANPHAM";
         try ( java.sql.Connection con = DBContext.getConnection();
                  PreparedStatement pr = con.prepareStatement(sql)){
             ResultSet rs = pr.getResultSet();
             while (rs.next()) {                
-                String idSP = rs.getString(1);
-                String tenSP = rs.getString(2);
-                String NgayNhap = rs.getString(3);
-                String Idtt = rs.getString(4);
-                String IdNhanHieu = rs.getString(5);
-                String MauSac = rs.getString(6);
-                String KichCo = rs.getString(7);
-                String GiaBan = rs.getString(8);
-                String NgaySX = rs.getString(9);
-                String SoLuong = rs.getString(10);
+                 SanPhamViewModel sp = new SanPhamViewModel();
+                sp.setIdSP(rs.getString(1));
+                sp.setTenSP(rs.getString(2));
+                sp.setMauSac(rs.getString(3));
+                sp.setKichCo(rs.getString(4));
+                sp.setSoLuong(rs.getInt(5));
+                sp.setNgayNhap(rs.getString(6));
+                sp.setTrangThai(rs.getString(7));
+                sp.setNhanHieu(rs.getString(8));
+                sp.setGiaBan(rs.getInt(9));
+                sp.setNgaySanXuat(rs.getString(10));
+                listSP.add(sp);
             }
         } catch (Exception e) {
+            e.getMessage();
         }
+        return listSP;
     }
-
+    public static void main(String[] args) {
+        ArrayList<SanPhamViewModel> lstSan= new SanPhamRepository().getList();
+        System.out.println(lstSan.toString());
+    }
 }
