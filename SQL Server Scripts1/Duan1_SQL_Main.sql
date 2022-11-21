@@ -9,7 +9,7 @@ DROP TABLE TRANGTHAISANPHAM;
 GO 
 create table TRANGTHAISANPHAM 
 (
-	Idtt nvarchar(100) primary key,
+	Idtt int primary key,
 	TenTrangThai nvarchar(100) not null,
 
 );
@@ -37,7 +37,7 @@ create table SANPHAM
 	IdSp varchar(10) primary key,
 	TenSp nvarchar(100) not null,
 	NgayNhap date,
-	Idtt nvarchar(100) not null,
+	Idtt int,
 	IdNhanHieu varchar(10) not null,
 	MauSac nvarchar(30) not null,
 	KichCo varchar(10) not null,
@@ -47,8 +47,13 @@ create table SANPHAM
 	foreign key (Idtt) references TRANGTHAISANPHAM(Idtt),
 	foreign key ( IdNhanHieu ) references NHANHIEU ( IdNhanHieu)
 );
-
-
+insert into SANPHAM(IdSp,TenSp,NgayNhap,Idtt,IdNhanHieu,MauSac,KichCo,GiaBan,NgaySanXuat,SoLuong) values
+				('Sp6',N'Quần đùi','2022-10-12',1,'NH1',N'Đỏ','S','100000','2022-09-10',100)
+insert into SANPHAM(IdSp,TenSp,NgayNhap,Idtt,IdNhanHieu,MauSac,KichCo,GiaBan,NgaySanXuat,SoLuong) values
+				('Sp2',N'Áo Thun','2022-11-12',2,'NH2',N'Trắng','M','100000','2022-09-10',100)
+insert into SANPHAM(IdSp,TenSp,NgayNhap,Idtt,IdNhanHieu,MauSac,KichCo,GiaBan,NgaySanXuat,SoLuong) values
+				('Sp5',N'Quần Âu','2022-10-12',1,'NH1',N'Đen','L','100000','2022-09-10',100)
+select SANPHAM.IdSp,TenSp,NgayNhap,Idtt,IdNhanHieu,MauSac,KichCo,GiaBan,NgaySanXuat,SoLuong from SANPHAM
 IF OBJECT_ID ('NGUOIDUNG') IS NOT NULL  
 DROP TABLE NGUOIDUNG;  
 GO 
@@ -161,12 +166,11 @@ create table ACCOUNT
 );
 
 	insert into account values ('admin','admin','admin',0)
- insert into TRANGTHAISANPHAM(Idtt,TenTrangThai) values ('1','Tốt'),('2','Bình thường')
+ insert into TRANGTHAISANPHAM(Idtt,TenTrangThai) values ('1','còn hàng'),('2','hết hàng')
  insert into NGUOIDUNG(IdNguoiDung,Email,SDT) values ('ND1','nd1@gmail.com','023456781'),('ND2','nd1@gmail.com','023456781'),('ND3','nd1@gmail.com','023456781')
  insert into NHANHIEU(IdNhanHieu,TenNhanHieu) values('NH1','Adidas'),('NH2','Dior')
  insert into TRANGTHAI(IdTrangThai,TenTrangThai) values ('1',N'Tốt'),('2',N'Bình thường')
-insert into SANPHAM(IdSp,TenSp,NgayNhap,Idtt,IdNhanHieu,MauSac,KichCo,GiaBan,NgaySanXuat,SoLuong) values
-				('Sp1',N'Quần đùi','2022-10-12','1','NH1',N'Đỏ','S','100000','2022-09-10',100)
+
 insert into NHANVIEN(IdNhanVien,MaNV,TenNV,NgaySinh,Email,SDT,DiaChi,IdTrangThai,ChucVu,GioiTinh,TK,MK) values 
 					('NV2','012',N'Phạm Quốc Đạt','2003-08-10','datpq@gmail.com','0982023282','Thanh Hoa','1',N'Nhân Viên',N'Nam','dat123','dat123')
 insert into HOADON(IDHD,IdSp,TenSp,IdNhanVien,IdNguoiDung,NgayTao,DiaChi,ThanhToan) values
