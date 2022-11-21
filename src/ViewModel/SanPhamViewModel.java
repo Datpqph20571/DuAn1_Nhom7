@@ -2,13 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package donaimModel;
+package ViewModel;
 
 /**
  *
- * @author pqd15
+ * @author DELL
  */
-public class SanPham {
+public class SanPhamViewModel {
+
     private String idSP;
     private String tenSP;
     private String ngayNhap;
@@ -20,10 +21,10 @@ public class SanPham {
     private int soLuong;
     private String ngaySanXuat;
 
-    public SanPham() {
+    public SanPhamViewModel() {
     }
 
-    public SanPham(String idSP, String tenSP, String ngayNhap, int trangThai, String nhanHieu, String mauSac, String kichCo, int giaBan, int soLuong, String ngaySanXuat) {
+    public SanPhamViewModel(String idSP, String tenSP, String ngayNhap, int trangThai, String nhanHieu, String mauSac, String kichCo, int giaBan, int soLuong, String ngaySanXuat) {
         this.idSP = idSP;
         this.tenSP = tenSP;
         this.ngayNhap = ngayNhap;
@@ -116,9 +117,25 @@ public class SanPham {
         this.ngaySanXuat = ngaySanXuat;
     }
 
+    public String trangThait() {
+        if (soLuong <= 0) {
+            return "hếthàng";
+        } else {
+            return "cònhàng";
+        }
+    }
+
+    public String nhanhieu() {
+        if (nhanHieu == "NH1") {
+            return "Adidas";
+        } else {
+            return "Dior";
+        }
+    }
+
     @Override
     public String toString() {
-        return "SanPham{" + "idSP=" + idSP + ", tenSP=" + tenSP + ", ngayNhap=" + ngayNhap + ", trangThai=" + trangThai + ", nhanHieu=" + nhanHieu + ", mauSac=" + mauSac + ", kichCo=" + kichCo + ", giaBan=" + giaBan + ", soLuong=" + soLuong + ", ngaySanXuat=" + ngaySanXuat + '}';
+        return "SanPhamViewModel{" + "idSP=" + idSP + ", tenSP=" + tenSP + ", ngayNhap=" + ngayNhap + ", trangThai=" + trangThai + ", nhanHieu=" + nhanHieu + ", mauSac=" + mauSac + ", kichCo=" + kichCo + ", giaBan=" + giaBan + ", soLuong=" + soLuong + ", ngaySanXuat=" + ngaySanXuat + '}';
     }
-    
+
 }
