@@ -82,7 +82,7 @@ create table NHANVIEN
 	IdNhanVien varchar(10) primary key,
 	MaNV varchar(10) not null unique,
 	TenNV nvarchar(100),
-	NgaySinh datetime,
+	NgaySinh date,
 	Email varchar(100) not null,
 	SDT varchar(100) not null,
 	DiaChi nvarchar(100),
@@ -93,6 +93,14 @@ create table NHANVIEN
 	MK varchar(100) not null,
 	constraint fk_tt foreign key (IdTrangThai) references TRANGTHAI( IdTrangThai)
 );
+select * from NHANVIEN
+insert into NHANVIEN(IdNhanVien,MaNV,TenNV,NgaySinh,Email,SDT,DiaChi,IdTrangThai,ChucVu,GioiTinh,TK,MK) 
+values ('NV1','001','Khanh','07/22/2003','cobengokngeck@gmail.com',
+'0947635543','Hong Thuan','TT01','nhan vien','Nam','Khanh@gmail.com','113')
+insert into nhanvien(IdNhanVien,MaNV,TenNV,NgaySinh,Email,SDT,DiaChi,IdTrangThai,ChucVu,GioiTinh,TK,MK) 
+values ('NV4','004','Hoang','04/12/2004','cobengokngeck@gmail.com',
+'0947635543','Hong Thuan','TT02','nhan vien','Nam','Khanh@gmail.com','115')
+
 IF OBJECT_ID ('NGUOIDUNG') IS NOT NULL  
 DROP TABLE NGUOIDUNG;  
 GO 
@@ -164,7 +172,7 @@ create table ACCOUNT
  insert into TRANGTHAISANPHAM(Idtt,TenTrangThai) values ('1','Tốt'),('2','Bình thường')
  insert into NGUOIDUNG(IdNguoiDung,Email,SDT) values ('ND1','nd1@gmail.com','023456781'),('ND2','nd1@gmail.com','023456781'),('ND3','nd1@gmail.com','023456781')
  insert into NHANHIEU(IdNhanHieu,TenNhanHieu) values('NH1','Adidas'),('NH2','Dior')
- insert into TRANGTHAI(IdTrangThai,TenTrangThai) values ('1',N'Tốt'),('2',N'Bình thường')
+ insert into TRANGTHAI(IdTrangThai,TenTrangThai) values ('001',N'Con lam'),('002',N'Nghi lam')
 insert into SANPHAM(IdSp,TenSp,NgayNhap,Idtt,IdNhanHieu,MauSac,KichCo,GiaBan,NgaySanXuat,SoLuong) values
 				('Sp1',N'Quần đùi','2022-10-12','1','NH1',N'Đỏ','S','100000','2022-09-10',100)
 insert into NHANVIEN(IdNhanVien,MaNV,TenNV,NgaySinh,Email,SDT,DiaChi,IdTrangThai,ChucVu,GioiTinh,TK,MK) values 
