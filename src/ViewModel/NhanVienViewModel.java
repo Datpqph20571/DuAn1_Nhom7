@@ -2,19 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package donaimModel;
+package ViewModel;
 
 /**
  *
- * @author pqd15
+ * @author Khanh
  */
-public class NhanVien {
-   private String idNv,maNV,tenNV,ngaySinh,email,sdt,diaChi,idTrangthai,chucVu,gioiTinh,tk,mk;
+public class NhanVienViewModel {
+    private String idNv,maNV,tenNV,ngaySinh,email,sdt,diaChi,idTrangthai,chucVu,gioiTinh,tk,mk;
 
-    public NhanVien() {
+    public NhanVienViewModel() {
     }
 
-    public NhanVien(String idNv, String maNV, String tenNV, String ngaySinh, String email, String sdt, String diaChi, String idTrangthai, String chucVu, String gioiTinh, String tk, String mk) {
+    public NhanVienViewModel(String idNv, String maNV, String tenNV, String ngaySinh, String email, String sdt, String diaChi, String idTrangthai, String chucVu, String gioiTinh, String tk, String mk) {
         this.idNv = idNv;
         this.maNV = maNV;
         this.tenNV = tenNV;
@@ -124,7 +124,6 @@ public class NhanVien {
     public void setMk(String mk) {
         this.mk = mk;
     }
-   
-   
+    
     
 }
