@@ -166,6 +166,7 @@ create table ACCOUNT
 );
 
 	insert into account values ('admin','admin','admin',0)
+	insert into account values ('nhanvien','nhanvien','nhanvien',1)
  insert into TRANGTHAISANPHAM(Idtt,TenTrangThai) values ('1','còn hàng'),('2','hết hàng')
  insert into NGUOIDUNG(IdNguoiDung,Email,SDT) values ('ND1','nd1@gmail.com','023456781'),('ND2','nd1@gmail.com','023456781'),('ND3','nd1@gmail.com','023456781')
  insert into NHANHIEU(IdNhanHieu,TenNhanHieu) values('NH1','Adidas'),('NH2','Dior')
