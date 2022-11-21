@@ -9,5 +9,21 @@ package ViewModel;
  * @author pqd15
  */
 public class IDSP {
+    private String id;
+
+    public IDSP() {
+    }
+
+    public IDSP(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
     
 }
