@@ -10,7 +10,6 @@ import com.sun.jdi.connect.spi.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.sql.*;
 
 
 
@@ -20,18 +19,18 @@ public class SanPhamRepository {
     public ArrayList<SanPhamViewModel> getList() {
         ArrayList<SanPhamViewModel> lstSamPhamViewModel = new ArrayList<>();
         String sql = "select SANPHAM.IdSp,TenSp,MauSac,KichCo,SoLuong,NgayNhap,Idtt,IdNhanHieu,GiaBan,NgaySanXuat from SANPHAM";
-        try (Connection con = connection.getConnection();
+        try (java.sql.Connection con = connection.getConnection();
                 PreparedStatement ps = con.prepareStatement(sql)) {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                SamPhamViewModel sp = new SamPhamViewModel();
+                SanPhamViewModel sp = new SanPhamViewModel();
                 sp.setIdSP(rs.getString(1));
                 sp.setTenSP(rs.getString(2));
                 sp.setMauSac(rs.getString(3));
                 sp.setKichCo(rs.getString(4));
                 sp.setSoLuong(rs.getInt(5));
                 sp.setNgayNhap(rs.getString(6));
-                sp.setTrangThai(rs.getInt(7));
+                sp.setTrangThai(rs.getString(7));
                 sp.setNhanHieu(rs.getString(8));
                 sp.setGiaBan(rs.getInt(9));
                 sp.setNgaySanXuat(rs.getString(10));
@@ -42,5 +41,9 @@ public class SanPhamRepository {
             e.getMessage();
         }
         return lstSamPhamViewModel;
+    }
+    public static void main(String[] args) {
+        ArrayList<SanPhamViewModel> lst = new SanPhamRepository().getList();
+        System.out.println(lst.toString());
     }
 }

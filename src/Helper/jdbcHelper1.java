@@ -18,7 +18,7 @@ import java.sql.ResultSet;
  */
 public class jdbcHelper1 {
 
-//<<<<<<< HEAD
+
     static String user = "sa";
     static String pass = "1111";
     static String url = "jdbc:sqlserver://localhost:1433;database=DUAN1_Main;" + 

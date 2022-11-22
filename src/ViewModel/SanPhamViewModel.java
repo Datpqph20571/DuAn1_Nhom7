@@ -116,7 +116,21 @@ public class SanPhamViewModel {
     public void setNgaySanXuat(String ngaySanXuat) {
         this.ngaySanXuat = ngaySanXuat;
     }
+public String trangThait() {
+        if (soLuong <= 0) {
+            return "hếthàng";
+        } else {
+            return "cònhàng";
+        }
+    }
 
+    public String nhanhieu() {
+        if (nhanHieu == "NH1") {
+            return "Adidas";
+        } else {
+            return "Dior";
+        }
+    }
     @Override
     public String toString() {
         return "SanPhamViewModel{" + "idSP=" + idSP + ", tenSP=" + tenSP + ", mauSac=" + mauSac + ", kichCo=" + kichCo + ", soLuong=" + soLuong + ", ngayNhap=" + ngayNhap + ", trangThai=" + trangThai + ", nhanHieu=" + nhanHieu + ", giaBan=" + giaBan + ", ngaySanXuat=" + ngaySanXuat + '}';
